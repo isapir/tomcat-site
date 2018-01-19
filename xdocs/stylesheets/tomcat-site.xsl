@@ -17,7 +17,7 @@
 -->
 <!-- Content Stylesheet for "tomcat-site" Documentation -->
 
-<!-- $Id: tomcat-site.xsl 1820182 2018-01-04 19:26:39Z rjung $ -->
+<!-- $Id: tomcat-site.xsl 1821618 2018-01-19 10:48:52Z markt $ -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   version="3.0">
@@ -33,8 +33,8 @@
 
   <!-- Defined parameters (overrideable) -->
   <xsl:param    name="relative-path" select="'.'"/>
-  <xsl:param    name="home-logo"     select="'/res/images/tomcat.png'"/>
-  <xsl:param    name="asf-logo"      select="'/res/images/asf_logo.svg'"/>
+  <xsl:param    name="home-logo"     select="'res/images/tomcat.png'"/>
+  <xsl:param    name="asf-logo"      select="'res/images/asf_logo.svg'"/>
   <xsl:param    name="buglink"       select="'https://bz.apache.org/bugzilla/show_bug.cgi?id='"/>
   <xsl:param    name="revlink"       select="'http://svn.apache.org/viewvc?view=rev&amp;rev='"/>
   <xsl:param    name="cvelink"       select="'http://cve.mitre.org/cgi-bin/cvename.cgi?name='"/>
@@ -58,7 +58,7 @@
        In XHTML, this is not needed as the encoding will be
        specified in the XML declaration.
   -->
-  <link href="/res/css/tomcat.css" rel="stylesheet" type="text/css"/>
+  <link href="res/css/tomcat.css" rel="stylesheet" type="text/css"/>
     <xsl:apply-templates select="meta"/>
     <title><xsl:value-of select="$project/title"/>&#174; - <xsl:value-of select="properties/title"/></title>
     <xsl:for-each select="properties/author">

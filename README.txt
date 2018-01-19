@@ -1,4 +1,4 @@
-$Id: README.txt 1800601 2017-07-03 08:19:13Z violetagg $
+$Id: README.txt 1821623 2018-01-19 11:34:19Z kkolinko $
 
 The Apache Tomcat Website Instructions
 ---------------------------------------
@@ -30,7 +30,7 @@ Sparse checkout:
     cd tomcat-site
     svn update --set-depth immediates docs
     svn update --set-depth infinity xdocs jk-xdocs native-xdocs
-    svn update --set-depth infinity docs/articles docs/images docs/stylesheets
+    svn update --set-depth infinity docs/articles docs/res
 
   This checkout omits a number of subdirectories inside of docs/. You will
   see them as empty subdirectories there. It you need to work on any of
@@ -61,8 +61,8 @@ reflected on the live tomcat.apache.org site. This happens almost
 immediately, so go to http://tomcat.apache.org/ and have fun.
 
 
-To update the documentation for Tomcat 6.0.x, 7.0.x, 8.0.x, 8.5.x or 9.0.x:
-==========================================================================
+To update the documentation for Tomcat 7.0.x, 8.0.x, 8.5.x or 9.0.x:
+=====================================================================
 
 1. If you are using the "sparse" checkout feature, make sure that
    subdirectories in the docs/ directory for the relevant Tomcat versions
@@ -71,7 +71,6 @@ To update the documentation for Tomcat 6.0.x, 7.0.x, 8.0.x, 8.5.x or 9.0.x:
    The commands are:
 
    cd tomcat-site
-   svn up --set-depth infinity docs/tomcat-6.0-doc
    svn up --set-depth infinity docs/tomcat-7.0-doc
    svn up --set-depth infinity docs/tomcat-8.0-doc
    svn up --set-depth infinity docs/tomcat-8.5-doc
@@ -94,7 +93,6 @@ To update the documentation for Tomcat 6.0.x, 7.0.x, 8.0.x, 8.5.x or 9.0.x:
    The commands are:
 
    cd tomcat-site
-   ant release-6
    ant release-7
    ant release-8
    ant release-85
