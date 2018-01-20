@@ -23,7 +23,7 @@ function addLiveEventListeners(selector, event, handler){
          event
         ,function(evt){
             var target = evt.target;
-            do {
+            while (target != null){
                 // isMatch is a patch for IE 9 - 11; once support for IE11
                 // is not required we can test with target.matches(selector)
                 var isMatch = target.matches ? target.matches(selector) : target.msMatchesSelector(selector);
@@ -33,7 +33,7 @@ function addLiveEventListeners(selector, event, handler){
                 }
 
                 target = target.parentElement;
-            } while (target != null);
+            }
         }
         ,true
     );
